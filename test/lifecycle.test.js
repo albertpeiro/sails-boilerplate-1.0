@@ -14,7 +14,7 @@ before(function(done) {
     hooks: { grunt: false },
     log: { level: 'warn' },
     models: {
-      connection: 'test',
+      datastore: 'default',
       migrate: 'drop'
     }
 
