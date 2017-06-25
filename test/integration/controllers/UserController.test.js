@@ -5,6 +5,7 @@ describe('UserController.login', function() {
 
   describe('#login()', function() {
     it('should redirect to /my/page', function (done) {
+
       supertest(sails.hooks.http.app)
         .post('/user/login')
         .send({ name: 'test', password: 'test' })

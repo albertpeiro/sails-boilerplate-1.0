@@ -12,7 +12,7 @@ before(function(done) {
 
     port: 1338,
     hooks: { grunt: false },
-    log: { level: 'warn' },
+    log: { level: 'verbose' },
     models: {
       datastore: 'default',
       migrate: 'drop'
@@ -23,6 +23,8 @@ before(function(done) {
 
     // here you can load fixtures, etc.
     // (for example, you might want to create some records in the database)
+    // Load fixtures
+
 
     return done();
   });
