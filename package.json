@@ -1,5 +1,5 @@
 {
-  "name": "fito",
+  "name": "sails-boilerplate",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -9,7 +9,6 @@
     "grunt": "1.0.1",
     "lodash": "3.10.1",
     "sails": "^1.0.0-36",
-    "sails-hook-babel": "^6.0.3",
     "sails-hook-grunt": "^2.0.0",
     "sails-hook-orm": "^2.0.0-16",
     "sails-hook-sockets": "^1.4.0"
@@ -27,7 +26,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/albertpeiro/fito.git"
+    "url": "git://github.com/albertpeiro/sails-boilerplate.git"
   },
   "author": "albertpeiro",
   "license": ""
