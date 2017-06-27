@@ -1,4 +1,6 @@
-var sails = require('sails');
+var Sails = require('sails');
+var Barrels = require('barrels');
+require('should');
 
 // Before running any tests...
 before(function(done) {
@@ -6,7 +8,7 @@ before(function(done) {
   // Increase the Mocha timeout so that Sails has enough time to lift, even if you have a bunch of assets.
   this.timeout(5000);
 
-  sails.lift({
+  Sails.lift({
     // Your sails app's configuration files will be loaded automatically,
     // but you can also specify any other special overrides here for testing purposes.
 
@@ -24,9 +26,15 @@ before(function(done) {
     // here you can load fixtures, etc.
     // (for example, you might want to create some records in the database)
     // Load fixtures
+    var barrels = new Barrels();
 
+    // Save original objects in `fixtures` variable
+    fixtures = barrels.data;
 
-    return done();
+    // Populate the DB
+    barrels.populate(function(err) {
+      done(err, sails);
+    });
   });
 });
 
@@ -35,7 +43,7 @@ after(function(done) {
 
   // here you can clear fixtures, etc.
   // (e.g. you might want to destroy the records you created above)
-
-  sails.lower(done);
+  console.log(); // Skip a line before displaying Sails lowering logs
+  Sails.lower(done);
 
 });
