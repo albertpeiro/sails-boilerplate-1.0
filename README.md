@@ -1,6 +1,6 @@
-# fito
+# sails-boilerplate-1.0
 
-a [Sails](https://sailsjs.com) application
+a [Sails](http://sailsjs.org) application
 
 
 ### Links
